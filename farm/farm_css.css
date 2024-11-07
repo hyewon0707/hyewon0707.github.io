@@ -1,0 +1,443 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333;
+  }
+
+  .wrap
+  {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  li {
+      list-style: none;
+  }
+
+  a
+  {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+  }
+  h1
+  {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+   nav a {
+      color: #fff;
+      text-decoration: none;
+  }
+
+   nav a:hover
+   {
+    color: rgb(130, 177, 75);
+   }
+
+  .clearfix::before,
+  .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+
+  #header {
+      width: 100%;
+      height: 95px;
+      /* gnbBg의 기준점 */
+      position: relative;
+  }
+
+  .container {
+    width: 90%;
+      height: inherit;
+      margin: 0 auto;
+      /* background-color: rgba(0,0,0,0.1);   */
+
+  }
+
+  .row {
+      padding: 0 28px;
+  }
+
+  /* media */
+
+  /* pc 네비게이션 */
+  @media(min-width:960px) {
+      .header
+        {
+        }
+
+      .header .logo {
+          /* 쌤이 맞춰놓은 사이즈 */
+          width: 184px;
+          height: 90px;
+          /* background-color: #ccc; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          float: left;
+      }
+
+      .logo a img
+      {
+        width: 55%;
+        height: 37%;
+      }
+
+      .header .gnb {
+          float: right;
+      }
+
+      .header .gnb > ul {}
+
+      .header .gnb > ul > li {
+          width: 136px;
+          padding: 35px 0;
+          float: left;
+          /* 가상요소 기준점 */
+          position: relative;
+      }
+
+      /* li 가상요소 */
+      .header .gnb > ul > li::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          background-color: #fff;
+          /* 마우스 오버 시 파란 줄 나오게하기 */
+          transform: scaleX(0);
+          transition: all 0.3s;
+      }
+
+      .header .gnb > ul > li:hover::after {
+          /* 마우스 오버 시 파란 줄 나오게하기 */
+          transform: scaleX(100%);
+      }
+
+      .header .gnb > ul > li > a {
+          display: block;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+      .header .gnb > ul > li > .submenu {
+          position: absolute;
+          left: 0;
+          top: 95px;
+          /* background-color: #ccc; */
+          width: 100%;
+          z-index: 10;
+          display: none;
+      }
+
+      .header .gnb > ul > li > .submenu > li {}
+
+      .header .gnb > ul > li > .submenu > li > a {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+          padding: 20px 0;
+      }
+
+      #gnbBg {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 95px;
+          z-index: 9;
+          display: none;
+      }
+
+  }
+
+  @media(max-width:1300px) {
+      .container {
+          width: 100%;
+      }
+  }
+
+  @media(max-width:1024px) {}
+
+  /* 모바일 네비게이션 */
+  @media(max-width:960px) {
+      .row {
+          padding: 0 20px;
+      }
+
+      .header 
+      {
+
+      }
+
+      .header .logo {
+          width: 100%;
+          height: 95px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .header .gnb {
+          /* container에 기준점 미리 잡아놓음 */
+          position: absolute;
+          left: -300px;
+          width: 250px;
+          height: calc(100vh - 95px);
+          background-color: #fff;
+          transition: 0.5s;
+      }
+
+      .header .gnb.open {
+          left: 0;
+      }
+
+      .header > .gnb > ul {
+          border-top: 0px solid #dbdbdb;
+          border-bottom: 0px solid #dbdbdb;
+      }
+
+      .header > .gnb > ul > li {
+          width: 100%;
+          border-top: 0px solid #dbdbdb;
+          border-bottom: 0px solid #dbdbdb;
+      }
+
+      .header > .gnb > ul > li > a {
+          display: block;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 15px 30px;
+      }
+
+      .header > .gnb > ul > li > .submenu {
+          display: none;
+          height: auto;
+      }
+
+      .header > .gnb > ul > li > .submenu > li {
+          border-top: 0px solid #dbdbdb;
+
+      }
+
+      .header > .gnb > ul > li > .submenu > li > a {
+          display: block;
+          font-size: 14px;
+          padding: 10px 60px;
+      }
+
+      #barMenu {
+          width: 40px;
+          height: 25px;
+          /* background-color: #ccc; */
+          /* container에 이미 realative 기준점 있음*/
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          cursor: pointer;
+      }
+
+      #barMenu .bar {
+          width: 40px;
+          height: 4px;
+          background-color: #1d1d1f;
+          /* bar::before, after 기준점 */
+          position: relative;
+      }
+
+      #barMenu .bar::before,
+      #barMenu .bar::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background-color: #1d1d1f;
+          left: 0;
+          top: 10px;
+      }
+
+      #barMenu .bar::after {
+          top: 20px;
+      }
+  }
+
+  .main
+  {
+    height: max-content;
+  }
+
+  .main video
+  {
+    width: 100%;
+    position: relative;
+    bottom: 105px;
+    height: 100%;
+    z-index: -10;
+  }
+
+.info
+{
+    display: flex;
+    margin-bottom: 105px;
+}
+
+.info_left
+{
+    width: 40%;
+    height: 500px;
+    background-color: azure;
+}
+
+.info_right
+{
+    width: 60%;
+    height: 500px;
+}
+
+  .first {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .second {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product /*margin*/
+  {
+    margin-bottom: 10%;
+  }
+
+  .product h1
+  {
+    margin-left: 3%
+  }
+  .product_slide {
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+    height: 30%;
+  }
+
+  .product_slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .farm_box
+  {
+    background-color: #dbdbdb;
+    padding: 3%;
+  }
+
+  .listwrap
+  {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
+
+  .listwrap a
+  {
+    width: 110px;
+    height: 110px;
+    margin: 0.7%;
+  }
+  .farm_circle
+  {
+    background-color: #eee;
+    border-radius: 50rem;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 110px;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .farm_text
+  {
+    display: none;
+  }
+
+
+  .farm_circle:hover
+  {
+    background-color: rgb(130, 177, 75);
+    border-radius: 50rem;
+    font-size: 1.5rem;
+  }
+
+  .farm_circle:hover > .farm_text
+  {
+    color: #fff;
+    display: block;
+  }
+
+  .farm_circle:hover > .icon
+  {
+    display: none;
+
+
+  }
+
+  .icon img
+  {
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;
+  }
+
+  .textlink
+  {
+    display: flex;
+    margin-top: 2%;
+  }
+
+  .farm_textlink
+  {
+    margin: 0.7%;
+    font-size: 1.5rem;
+  }
+
+  .farm_textlink a
+  {
+    color: #222;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .farm_textlink a:hover
+  {
+    color: rgb(130, 177, 75);
+  }
+
+  :root{
+    --swiper-theme-color: rgb(130, 177, 75) !important;
+  }
