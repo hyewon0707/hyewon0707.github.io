@@ -350,6 +350,16 @@
     height: 100%;
   }
 
+  .farm /*margin*/
+  {
+    margin-bottom: 10%;
+  }
+
+  .farm h1
+  {
+    margin-bottom: 5%;
+  }
+
   .farm_box
   {
     background-color: #dbdbdb;
@@ -370,6 +380,7 @@
     height: 110px;
     margin: 0.7%;
   }
+
   .farm_circle
   {
     background-color: #eee;
@@ -385,7 +396,6 @@
   {
     display: none;
   }
-
 
   .farm_circle:hover
   {
@@ -403,8 +413,6 @@
   .farm_circle:hover > .icon
   {
     display: none;
-
-
   }
 
   .icon img
@@ -436,6 +444,134 @@
   .farm_textlink a:hover
   {
     color: rgb(130, 177, 75);
+  }
+
+  .news
+  {
+    height: max-content;
+    margin-bottom: 10%;
+  }
+
+  .news h1
+  {
+    margin-bottom: 5%;
+  }
+
+  .news_more
+  {
+    text-align: center;
+  }
+
+  .news_box
+  {
+    display: flex;
+  }
+
+  .article_box img
+  {
+    width: 350px;
+    height: 300px;
+  }
+
+  .article_box h2
+  {
+    margin-bottom: 250px;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .article_box:hover > h2
+  {
+    color: rgb(130, 177, 75);
+  }
+
+  .third_pagination
+  {
+    top: 95% !important;
+  }
+
+  .news_more
+  {
+    font-size: 1.5rem;
+    margin-top: 3%;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .news_more:hover
+  {
+    color: rgb(130, 177, 75);
+  }
+
+  .service
+  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    gap: 5%;
+  }
+
+  .customer
+  {
+    width: 630px;
+    height: 260px;
+    background: #b7e4c1 url(./img/customer.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 30px;
+  }
+
+  .customer:hover
+  {
+    background-image: url(./img/customer.png), linear-gradient(to left, #0ba360 0%, #3cba92 100%);
+  }
+
+  h3
+  {
+    font-size: 3rem;
+    margin-left: 10%;
+    margin-top: 14%;
+    display:inline-block; 
+    text-transform:uppercase;
+  }
+
+  h3:after
+  {
+    display:block;
+    content: '';
+    border-bottom: solid 5px #fff;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+  }
+
+  .customer:hover > .customer_h3:after { transform: scaleX(1); }
+
+  .customer:hover > .customer_h3
+  {
+    color: #fff;
+  }
+
+  .chat
+  {
+    width: 630px;
+    height: 260px;
+    background: #ffdfc4 url(./img/chat.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-radius: 30px;
+  }
+
+  .chat:hover
+  {
+    background-image: url(./img/chat.png), linear-gradient(to left, #ff7e5f 0%, #feb47b 100%);
+  }
+
+  .chat:hover > .chat_h3:after { transform: scaleX(1); }
+
+  .chat:hover > .chat_h3
+  {
+    color: #fff;
   }
 
   :root{

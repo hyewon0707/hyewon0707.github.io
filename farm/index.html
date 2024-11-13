@@ -342,12 +342,64 @@
       </div> <!-- farm_box end -->
     </section>
 
+    <section class="news wrap">
+        <h1>홍보센터</h1>
+      <div class="swiper third">
+        <div class="news_box swiper-wrapper">
+          <div class="article_box swiper-slide">
+            <img src="./img/article_1.jpg" alt="">
+            <h2>팜한농, 5년 연속 품질만족지수 1위</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_2.jpg" alt="">
+            <h2>팜한농, 바이엘과 '지속가능한 사업 협력' 협약</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_3.jpg" alt="">
+            <h2>팜한농, '테라도' 생산능력 2배로 키웠다</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_4.jpg" alt="">
+            <h2>팜한농, 국립농업과학원과 공동연구협약</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_5.png" alt="">
+            <h2>가을 무·배추 빠른 생육 … '성장엔(N)' 인기</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_6.png" alt="">
+            <h2>가을철 밑거름, 황 함유 비료로 작물을 튼실하게</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_7.jpg" alt="">
+            <h2>무인헬기·드론으로 살포하는 비료 인기</h2>
+          </div>
+          <div class="article_box swiper-slide">
+            <img src="./img/article_8.jpg" alt="">
+            <h2>팜한농, 국립낙동강생물자원관과 무름병 방제 미생물 기술이전 계약</h2>
+          </div>
+        </div>
+        <div class="swiper-pagination third_pagination"></div>
+      </div>    
+      <a href="#"><p class="news_more">뉴스 더보기 &nbsp; ></p></a>
+    </section>
+
+    <section class="service wrap">
+      <div class="customer">
+        <h3 class="customer_h3">고객센터</h3>
+      </div>
+
+      <div class="chat">
+        <h3 class="chat_h3">1:1상담</h3>
+      </div>
+    </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="res_fulldown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
+  <script>
     var swiper = new Swiper(".first", {
       direction: "vertical",
       slidesPerView: 1,
@@ -358,7 +410,7 @@
         clickable: true,
       },
     });
-    </script>
+  </script>
 
 <script>
     var swiper = new Swiper(".second", {
@@ -372,9 +424,27 @@
         rotate: 0,
         slideShadows: false,
       },
-
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
   </script>
+
+<script>
+  var swiper = new Swiper(".third", {
+    slidesPerView: 4,
+    spaceBetween: 40,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+  });
+</script>
 </body>
 
 </html>
