@@ -166,7 +166,7 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 .navbar-custom .navbar-brand {
-    color: #fff;
+
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bolder;
 }
@@ -206,7 +206,6 @@ fieldset[disabled] .btn-xl:hover {
 .navbar-custom .nav li a {
     font-weight: 510;
     letter-spacing: 1px;
-    color: #fff;
 }
 
 .navbar-custom .nav li a:focus,
