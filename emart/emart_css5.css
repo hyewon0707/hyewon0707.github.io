@@ -725,7 +725,8 @@
         {
             display: flex;
             justify-content: space-between;
-            width: 50%;
+            width: 120%;
+            gap: 1%;
         }
 
         .foothead a
@@ -759,6 +760,7 @@
         .sns_box
         {
             display: flex;
+            margin-left: 25%;
         }
 
         .sns
